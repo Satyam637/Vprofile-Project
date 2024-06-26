@@ -25,6 +25,8 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
 
   vproapp:
+    build:
+     context: ./Docker-files/app
     image: satte97/vprofileapp
     ports:
       - "8080:8080"
@@ -32,6 +34,8 @@ services:
       - vproappdata:/usr/local/tomcat/webapps
 
   vproweb:
+    build:
+     context: ./Docker-files/web
     image: satte97/vprofileweb
     ports:
       - "80:80"
