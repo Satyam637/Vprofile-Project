@@ -28,6 +28,7 @@ services:
     build:
      context: ./Docker-files/app
     image: satte97/vprofileapp
+    container_name: vproapp
     ports:
       - "8080:8080"
     volumes: 
@@ -37,6 +38,7 @@ services:
     build:
      context: ./Docker-files/web
     image: satte97/vprofileweb
+    container_name: vproweb
     ports:
       - "80:80"
 volumes:
